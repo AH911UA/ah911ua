@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>ADA Hryhorenko Oleksandr</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="logo.ico" rel="icon" />
+    <link href="logo.ico" rel="apple-touch-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        color: #272829;
+      }
+
+      a {
+        color: #FF6F00;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #37b3ed;
+        text-decoration: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Raleway", sans-serif;
+      }
+
+      /*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+      .back-to-top {
+        position: fixed;
+        visibility: hidden;
+        opacity: 0;
+        right: 15px;
+        bottom: 15px;
+        z-index: 996;
+        background: #FF6F00;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        transition: all 0.4s;
+      }
+
+      .back-to-top i {
+        font-size: 28px;
+        color: #eee;
+        line-height: 0;
+      }
+
+      .back-to-top:hover {
+        background: #2eafec;
+        color: #eee;
+      }
+
+      .back-to-top.active {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+      #header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 300px;
+        transition: all ease-in-out 0.5s;
+        z-index: 9997;
+        transition: all 0.5s;
+        padding: 0 15px;
+        background: #212121;
+        overflow-y: auto;
+      }
+
+      #header .profile img {
+        margin: 15px auto;
+        display: block;
+        width: 120px;
+        border: 8px solid #2c2f3f;
+      }
+
+      .who-i-am {
+        padding: 20px;
+        background-color: rgba(255, 167, 9, 0.5);
+
+        border-radius: 20px;
+      }
+
+      #header .profile h1 {
+        font-size: 24px;
+        margin: 0;
+        padding: 0;
+        font-weight: 600;
+        -moz-text-align-last: center;
+        text-align-last: center;
+        font-family: "Poppins", sans-serif;
+      }
+
+      #header .profile h1 a,
+      #header .profile h1 a:hover {
+        color: #eee;
+        text-decoration: none;
+      }
+
+      #header .profile .social-links a {
+        font-size: 18px;
+        display: inline-block;
+        background: #212431;
+        color: #eee;
+        line-height: 1;
+        margin-right: 4px;
+        border-radius: 15%;
+        text-align: center;
+        width: 36px;
+        height: 36px;
+        transition: 0.3s;
+      }
+
+      #header .profile .social-links a:hover {
+        background: #FF6F00;
+        color: #eee;
+        text-decoration: none;
+      }
+
+      #main {
+        margin-left: 300px;
+      }
+
+      .container,
+      .container-fluid {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      @media (max-width: 1199px) {
+        #header {
+          left: -300px;
+        }
+
+        #main {
+          margin-left: 0;
+        }
+
+        .container,
+        .container-fluid {
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+      }
+
+      /*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+      /* Desktop Navigation */
+      .nav-menu {
+        padding: 30px 0 0 0;
+      }
+
+      .nav-menu * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .nav-menu > ul > li {
+        position: relative;
+        white-space: nowrap;
+      }
+
+      .nav-menu a,
+      .nav-menu a:focus {
+        display: flex;
+        align-items: center;
+        color: #a8a9b4;
+        padding: 12px 15px;
+        margin-bottom: 8px;
+        transition: 0.3s;
+        font-size: 15px;
+      }
+
+      .nav-menu a i,
+      .nav-menu a:focus i {
+        font-size: 24px;
+        padding-right: 8px;
+        color: #6f7180;
+      }
+
+      .nav-menu a:hover,
+      .nav-menu .active,
+      .nav-menu .active:focus,
+      .nav-menu li:hover > a {
+        text-decoration: none;
+        color: #FF6F00;
+      }
+
+      .nav-menu a:hover i,
+      .nav-menu .active i,
+      .nav-menu .active:focus i,
+      .nav-menu li:hover > a i {
+        color: #FF6F00;
+      }
+
+      /* Mobile Navigation */
+      .mobile-nav-toggle {
+        position: fixed;
+        right: 15px;
+        top: 15px;
+        z-index: 9998;
+        border: 0;
+        font-size: 24px;
+        transition: all 0.4s;
+        outline: none !important;
+        background-color: #FF6F00;
+        color: #eee;
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 0;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+
+      .mobile-nav-active {
+        overflow: hidden;
+      }
+
+      .mobile-nav-active #header {
+        left: 0;
+      }
+
+      /*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+      #hero {
+        width: 100%;
+        height: 100vh;
+        background: url("hero-bg.jpeg") top center;
+        background-size: cover;
+      }
+
+      #hero:before {
+        content: "";
+        background: rgba(5, 13, 24, 0.3);
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+
+      #hero .hero-container {
+        position: relative;
+        z-index: 2;
+        min-width: 300px;
+      }
+
+      #hero h1 {
+        margin: 0 0 10px 0;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 56px;
+        color: #eee;
+      }
+
+      #hero p {
+        color: #eee;
+        margin-bottom: 50px;
+        font-size: 26px;
+        font-family: "Poppins", sans-serif;
+      }
+
+      #hero p span {
+        color: #eee;
+        padding-bottom: 4px;
+        letter-spacing: 1px;
+        border-bottom: 3px solid #FF6F00;
+      }
+
+      @media (min-width: 1024px) {
+        #hero {
+          background-attachment: fixed;
+        }
+      }
+
+      @media (max-width: 768px) {
+        #hero h1 {
+          font-size: 28px;
+          line-height: 36px;
+        }
+
+        #hero h2 {
+          font-size: 18px;
+          line-height: 24px;
+          margin-bottom: 30px;
+        }
+      }
+
+      /*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+      section {
+        padding: 60px 0;
+        overflow: hidden;
+      }
+
+      .section-bg {
+        background: #f5f8fd;
+      }
+
+      .section-title {
+        padding-bottom: 30px;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        position: relative;
+        color: #212121;
+      }
+
+      .section-title h2::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: #FF6F00;
+        bottom: 0;
+        left: 0;
+      }
+
+      .section-title p {
+        margin-bottom: 0;
+      }
+
+      /*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+      .about .content h3 {
+        font-weight: 700;
+        font-size: 26px;
+        color: #212121;
+      }
+
+      .about .content ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .about .content ul li {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+      }
+
+      .about .content ul strong {
+        margin-right: 10px;
+      }
+
+      .about .content ul i {
+        font-size: 16px;
+        margin-right: 5px;
+        color: #FF6F00;
+        line-height: 0;
+      }
+
+      .about .content p:last-child {
+        margin-bottom: 0;
+      }
+
+      /*--------------------------------------------------------------
+# Facts
+--------------------------------------------------------------*/
+      .facts {
+        padding-bottom: 30px;
+      }
+
+      .facts .count-box {
+        padding: 30px;
+        width: 100%;
+      }
+
+      .facts .count-box i {
+        display: block;
+        font-size: 44px;
+        color: #FF6F00;
+        float: left;
+        line-height: 0;
+      }
+
+      .facts .count-box span {
+        font-size: 48px;
+        line-height: 40px;
+        display: block;
+        font-weight: 700;
+        color: #050d18;
+        margin-left: 60px;
+      }
+
+      .facts .count-box p {
+        padding: 15px 0 0 0;
+        margin: 0 0 0 60px;
+        font-family: "Raleway", sans-serif;
+        font-size: 14px;
+        color: #122f57;
+      }
+
+      .facts .count-box a {
+        font-weight: 600;
+        display: block;
+        margin-top: 20px;
+        color: #122f57;
+        font-size: 15px;
+        font-family: "Poppins", sans-serif;
+        transition: ease-in-out 0.3s;
+      }
+
+      .facts .count-box a:hover {
+        color: #FF6F00;
+      }
+
+      /*--------------------------------------------------------------
+# Akills
+--------------------------------------------------------------*/
+      .skills .progress {
+        height: 60px;
+        display: block;
+        background: none;
+        border-radius: 0;
+      }
+
+      .skills .progress .skill {
+        padding: 0;
+        margin: 0 0 6px 0;
+        text-transform: uppercase;
+        display: block;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        color: #050d18;
+      }
+
+      .skills .progress .skill .val {
+        float: right;
+        font-style: normal;
+      }
+
+      .skills .progress-bar-wrap {
+        background: #dce8f8;
+        height: 10px;
+      }
+
+      .skills .progress-bar {
+        width: 1px;
+        height: 10px;
+        transition: 0.9s;
+        background-color: #FF6F00;
+      }
+
+      /*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+      .resume .resume-title {
+        font-size: 26px;
+        font-weight: 700;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #050d18;
+      }
+
+      .resume .resume-item {
+        padding: 0 0 20px 20px;
+        margin-top: -2px;
+        border-left: 2px solid #E65100;
+        position: relative;
+      }
+
+      .resume .resume-item h4 {
+        line-height: 18px;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: "Poppins", sans-serif;
+        color: #050d18;
+        margin-bottom: 10px;
+      }
+
+      .resume .resume-item h5 {
+        font-size: 16px;
+        background: #e4edf9;
+        padding: 5px 15px;
+        display: inline-block;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .resume .resume-item ul {
+        padding-left: 20px;
+      }
+
+      .resume .resume-item ul li {
+        padding-bottom: 10px;
+      }
+
+      .resume .resume-item:last-child {
+        padding-bottom: 0;
+      }
+
+      .resume .resume-item::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50px;
+        left: -9px;
+        top: 0;
+        background: #eee;
+        border: 2px solid #E65100;
+      }
+
+      /*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+      .portfolio .portfolio-item {
+        margin-bottom: 30px;
+      }
+
+      .portfolio #portfolio-flters {
+        padding: 0;
+        margin: 0 auto 35px auto;
+        list-style: none;
+        text-align: center;
+        background: #eee;
+        border-radius: 50px;
+        padding: 2px 15px;
+      }
+
+      .portfolio #portfolio-flters li {
+        cursor: pointer;
+        display: inline-block;
+        padding: 10px 15px 8px 15px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1;
+        text-transform: uppercase;
+        color: #272829;
+        margin-bottom: 5px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .portfolio #portfolio-flters li:hover,
+      .portfolio #portfolio-flters li.filter-active {
+        color: #FF6F00;
+      }
+
+      .portfolio #portfolio-flters li:last-child {
+        margin-right: 0;
+      }
+
+      .portfolio .portfolio-wrap {
+        transition: 0.3s;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .portfolio .portfolio-wrap::before {
+        content: "";
+        background: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transition: all ease-in-out 0.3s;
+        z-index: 2;
+        opacity: 0;
+      }
+
+      .portfolio .portfolio-wrap .portfolio-links {
+        opacity: 1;
+        left: 0;
+        right: 0;
+        bottom: -60px;
+        z-index: 3;
+        position: absolute;
+        transition: all ease-in-out 0.3s;
+        display: flex;
+        justify-content: center;
+      }
+
+      .portfolio .portfolio-wrap .portfolio-links a {
+        color: #eee;
+        font-size: 28px;
+        text-align: center;
+        background: rgba(20, 157, 221, 0.75);
+        transition: 0.3s;
+        width: 50%;
+      }
+
+      .portfolio .portfolio-wrap .portfolio-links a:hover {
+        background: rrgb(255, 111, 0, 0.95);
+      }
+
+      .portfolio .portfolio-wrap .portfolio-links a + a {
+        border-left: 1px solid #37b3ed;
+      }
+
+      .portfolio .portfolio-wrap:hover::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 1;
+      }
+
+      .portfolio .portfolio-wrap:hover .portfolio-links {
+        opacity: 1;
+        bottom: 0;
+      }
+
+      /*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+      .portfolio-details {
+        padding-top: 40px;
+      }
+
+      .portfolio-details .portfolio-details-slider img {
+        width: 100%;
+      }
+
+      .portfolio-details .portfolio-details-slider .swiper-pagination {
+        margin-top: 20px;
+        position: relative;
+      }
+
+      .portfolio-details
+        .portfolio-details-slider
+        .swiper-pagination
+        .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: #eee;
+        opacity: 1;
+        border: 1px solid #FF6F00;
+      }
+
+      .portfolio-details
+        .portfolio-details-slider
+        .swiper-pagination
+        .swiper-pagination-bullet-active {
+        background-color: #FF6F00;
+      }
+
+      .portfolio-details .portfolio-info {
+        padding: 30px;
+        box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08);
+      }
+
+      .portfolio-details .portfolio-info h3 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .portfolio-details .portfolio-info ul {
+        list-style: none;
+        padding: 0;
+        font-size: 15px;
+      }
+
+      .portfolio-details .portfolio-info ul li + li {
+        margin-top: 10px;
+      }
+
+      .portfolio-details .portfolio-description {
+        padding-top: 30px;
+      }
+
+      .portfolio-details .portfolio-description h2 {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .portfolio-details .portfolio-description p {
+        padding: 0;
+      }
+
+      /*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+      .services .icon-box {
+        margin-bottom: 20px;
+      }
+
+      .services .icon {
+        float: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        background: #FF6F00;
+        border-radius: 50%;
+        transition: 0.5s;
+        border: 5px solid #FF6F00;
+      }
+
+      .services .icon i {
+        color: #eee;
+        font-size: 24px;
+        line-height: 0;
+      }
+
+      .services .icon-box .icon {
+        background: #eee;
+      }
+
+      .services .icon-box:hover .icon i {
+        color: #BF360C;
+      }
+
+      .services .title {
+        margin-left: 80px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+
+      .services .title a {
+        color: #343a40;
+      }
+
+      .services .title a:hover {
+        color: #FF6F00;
+      }
+
+      .services .description {
+        margin-left: 80px;
+        line-height: 24px;
+        font-size: 14px;
+      }
+
+      /*--------------------------------------------------------------
+# Testimonials
+--------------------------------------------------------------*/
+      .testimonials .testimonials-carousel,
+      .testimonials .testimonials-slider {
+        overflow: hidden;
+      }
+
+      .testimonials .testimonial-item {
+        box-sizing: content-box;
+        text-align: center;
+        min-height: 320px;
+      }
+
+      .testimonials .testimonial-item .testimonial-img {
+        width: 90px;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+
+      .testimonials .testimonial-item h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0 5px 0;
+        color: #111;
+      }
+
+      .testimonials .testimonial-item h4 {
+        font-size: 14px;
+        color: #999;
+        margin: 0;
+      }
+
+      .testimonials .testimonial-item .quote-icon-left,
+      .testimonials .testimonial-item .quote-icon-right {
+        color: #c3e8fa;
+        font-size: 26px;
+      }
+
+      .testimonials .testimonial-item .quote-icon-left {
+        display: inline-block;
+        left: -5px;
+        position: relative;
+      }
+
+      .testimonials .testimonial-item .quote-icon-right {
+        display: inline-block;
+        right: -5px;
+        position: relative;
+        top: 10px;
+      }
+
+      .testimonials .testimonial-item p {
+        font-style: italic;
+        margin: 0 15px 15px 15px;
+        padding: 20px;
+        background: #eee;
+        position: relative;
+        margin-bottom: 35px;
+        border-radius: 6px;
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .testimonials .testimonial-item p::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 20px solid #eee;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+        position: absolute;
+        bottom: -20px;
+        left: calc(50% - 20px);
+      }
+
+      .testimonials .swiper-pagination {
+        margin-top: 20px;
+        position: relative;
+      }
+
+      .testimonials .swiper-pagination .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: #eee;
+        opacity: 1;
+        border: 1px solid #FF6F00;
+      }
+
+      .testimonials .swiper-pagination .swiper-pagination-bullet-active {
+        background-color: #FF6F00;
+      }
+
+      /*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+      .contact {
+        padding-bottom: 130px;
+      }
+
+      .contact .info {
+        padding: 30px;
+        background: #eee;
+        width: 100%;
+        box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+      }
+
+      .contact .info i {
+        font-size: 20px;
+        color: #FF6F00;
+        float: left;
+        width: 44px;
+        height: 44px;
+        background: #dff3fc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .contact .info h4 {
+        padding: 0 0 0 60px;
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #050d18;
+      }
+
+      .contact .info p {
+        padding: 0 0 10px 60px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #212121;
+      }
+
+      .contact .info .email p {
+        padding-top: 5px;
+      }
+
+      .contact .info .social-links {
+        padding-left: 60px;
+      }
+
+      .contact .info .social-links a {
+        font-size: 18px;
+        display: inline-block;
+        background: #333;
+        color: #eee;
+        line-height: 1;
+        padding: 8px 0;
+        border-radius: 50%;
+        text-align: center;
+        width: 36px;
+        height: 36px;
+        transition: 0.3s;
+        margin-right: 10px;
+      }
+
+      .contact .info .social-links a:hover {
+        background: #FF6F00;
+        color: #eee;
+      }
+
+      .contact .info .email:hover i,
+      .contact .info .address:hover i,
+      .contact .info .phone:hover i {
+        background: #FF6F00;
+        color: #eee;
+      }
+
+      .contact .php-email-form {
+        width: 100%;
+        padding: 30px;
+        background: #eee;
+        box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+      }
+
+      .contact .php-email-form .form-group {
+        padding-bottom: 8px;
+      }
+
+      .contact .php-email-form .validate {
+        display: none;
+        color: red;
+        margin: 0 0 15px 0;
+        font-weight: 400;
+        font-size: 13px;
+      }
+
+      .contact .php-email-form .error-message {
+        display: none;
+        color: #eee;
+        background: #ed3c0d;
+        text-align: left;
+        padding: 15px;
+        font-weight: 600;
+      }
+
+      .contact .php-email-form .error-message br + br {
+        margin-top: 25px;
+      }
+
+      .contact .php-email-form .sent-message {
+        display: none;
+        color: #eee;
+        background: #18d26e;
+        text-align: center;
+        padding: 15px;
+        font-weight: 600;
+      }
+
+      .contact .php-email-form .loading {
+        display: none;
+        background: #eee;
+        text-align: center;
+        padding: 15px;
+      }
+
+      .contact .php-email-form .loading:before {
+        content: "";
+        display: inline-block;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        margin: 0 10px -6px 0;
+        border: 3px solid #18d26e;
+        border-top-color: #eee;
+        animation: animate-loading 1s linear infinite;
+      }
+
+      .contact .php-email-form .form-group {
+        margin-bottom: 15px;
+      }
+
+      .contact .php-email-form label {
+        padding-bottom: 8px;
+      }
+
+      .contact .php-email-form input,
+      .contact .php-email-form textarea {
+        border-radius: 0;
+        box-shadow: none;
+        font-size: 14px;
+      }
+
+      .contact .php-email-form input {
+        height: 44px;
+      }
+
+      .contact .php-email-form textarea {
+        padding: 10px 15px;
+      }
+
+      .contact .php-email-form button[type="submit"] {
+        background: #FF6F00;
+        border: 0;
+        padding: 10px 24px;
+        color: #eee;
+        transition: 0.4s;
+        border-radius: 4px;
+      }
+
+      .contact .php-email-form button[type="submit"]:hover {
+        background: #37b3ed;
+      }
+
+      @keyframes animate-loading {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+      .breadcrumbs {
+        padding: 20px 0;
+        background: #f9f9f9;
+      }
+
+      .breadcrumbs h2 {
+        font-size: 26px;
+        font-weight: 300;
+      }
+
+      .breadcrumbs ol {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 15px;
+      }
+
+      .breadcrumbs ol li + li {
+        padding-left: 10px;
+      }
+
+      .breadcrumbs ol li + li::before {
+        display: inline-block;
+        padding-right: 10px;
+        color: #0e2442;
+        content: "/";
+      }
+
+      @media (max-width: 768px) {
+        .breadcrumbs .d-flex {
+          display: block !important;
+        }
+
+        .breadcrumbs ol {
+          display: block;
+        }
+
+        .breadcrumbs ol li {
+          display: inline-block;
+        }
+      }
+
+      /*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+      #footer {
+        padding: 15px;
+        color: #f4f6fd;
+        font-size: 14px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 300px;
+        z-index: 9999;
+        background: #212121;
+      }
+
+      #footer .copyright {
+        text-align: center;
+      }
+
+      #footer .credits {
+        padding-top: 5px;
+        text-align: center;
+        font-size: 13px;
+        color: #eaebf0;
+      }
+
+      @media (max-width: 1199px) {
+        #footer {
+          position: static;
+          width: auto;
+          padding-right: 20px 15px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+      <div class="d-flex flex-column">
+        <div class="profile">
+          <h1 class="text-light mt-5">
+            <a href="index.html">Alex Hryhorenko</a>
+          </h1>
+          <div class="social-links mt-3 text-center">
+            <a
+              href="https://www.facebook.com/aleksandr.hryhorenko.5"
+              class="facebook"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#757575" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/></svg>
+            </a>
+            <a
+              href="https://www.instagram.com/hap.bb?igsh=MXE2M2RkOWl3cGFpdg%3D%3D&utm_source=qr"
+              class="instagram"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#757575" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z"/></svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/aleksandr-hryhorenko-a83106153/"
+              class="linkedin"
+              >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#757575" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <nav id="navbar" class="nav-menu navbar">
+          <ul>
+            <li>
+              <a href="#hero" class="nav-link scrollto active"
+                ><i class="bx bx-home"></i> <span>Home</span></a
+              >
+            </li>
+            <li>
+              <a href="#about" class="nav-link scrollto"
+                ><i class="bx bx-user"></i> <span>About</span></a
+              >
+            </li>
+            <li>
+              <a href="#resume" class="nav-link scrollto"
+                ><i class="bx bx-file-blank"></i> <span>Resume</span></a
+              >
+            </li>
+            <li>
+              <a href="#services" class="nav-link scrollto"
+                ><i class="bx bx-server"></i> <span>Services</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- .nav-menu -->
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section
+      id="hero"
+      class="d-flex flex-column justify-content-center align-items-center"
+    >
+      <div class="hero-container" data-aos="fade-in">
+        <h1>Alex Hryhorenko</h1>
+        <p class="who-i-am">I'm Fullstack Developer</p>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <main id="main">
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-title">
+            <h2>About</h2>
+            <p>
+              I am Alexander Hryhorenko, a Fullstack Developer with extensive
+              experience in developing web applications. I focus on creating
+              intuitive and functional user interfaces and developing robust
+              server solutions.
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4" data-aos="fade-right">
+              <img src="profile-img.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+              <h3>Fullstack Developer with a Project Management Background</h3>
+              <p class="fst-italic">
+                Skilled in a wide range of modern technologies including HTML,
+                SCSS, JavaScript, TypeScript, Angular, React, and Node.js, I
+                bring forward solutions that integrate both client-side and
+                server-side technologies seamlessly.
+              </p>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Birthday:</strong> <span>28 August 1993</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Phone:</strong> <span>+48 510 729 078</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>City:</strong> <span>Gdansk, Poland</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="bi bi-chevron-right"></i> <strong>Age:</strong>
+                      <span>30</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Degree:</strong> <span>Master</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Email:</strong>
+                      <span>ada.hryhorenko@gmail.com</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Freelance:</strong> <span>Available</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p>
+                My professional journey has included significant roles such as
+                Project Manager and Lead Developer, equipping me with
+                substantial expertise in managing both frontend and backend
+                aspects of technology projects. Whether optimizing performance
+                or integrating new technologies, I strive to push the boundaries
+                of what web applications can achieve.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Section -->
+
+      <!-- End Facts Section -->
+
+      <!-- ======= Skills Section ======= -->
+      <section id="skills" class="skills section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Skills</h2>
+            <p>
+              As a dedicated Fullstack Developer, I have honed a broad range of
+              technical skills crucial for modern web development. Below is a
+              snapshot of my core competencies, showcasing both frontend and
+              backend technologies.
+            </p>
+          </div>
+
+          <div class="row skills-content">
+            <div class="col-lg-6" data-aos="fade-up">
+              <div class="progress">
+                <span class="skill">HTML <i class="val">100%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="100"
+                    style="width: 100%;"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">CSS/SCSS <i class="val">95%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="95"
+                    style="width: 95%;"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">JavaScript <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    style="width: 90%;"
+                    role="progressbar"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">TypeScript <i class="val">85%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 100%;"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">Bash <i class="val">40%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="40"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 40%;"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="progress">
+                <span class="skill">Angular <i class="val">85%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 85%;"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">React <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 90%;"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">Node.js <i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 80%;"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">Next.js <i class="val">75%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 75%;"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">Docker <i class="val">65%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="65"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 65%;"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Skills Section -->
+
+      <!-- ======= Resume Section ======= -->
+      <section id="resume" class="resume">
+        <div class="container">
+          <div class="section-title">
+            <h2>Resume</h2>
+            <p>
+              As a Fullstack Developer, I have built a career that spans various
+              technologies and projects, each contributing to my growth and
+              expertise in the industry.
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-up">
+              <h3 class="resume-title">Summary</h3>
+              <div class="resume-item pb-0">
+                <h4>Alexander Hryhorenko</h4>
+                <p>
+                  <em
+                    >Experienced Fullstack Developer with a proven track record
+                    of delivering robust solutions in fast-paced environments.
+                    Expert in technologies such as HTML, SCSS, JavaScript,
+                    TypeScript, Angular, React, Node.js, and more.</em
+                  >
+                </p>
+                <ul>
+                  <li>Current location: Remote, based in Poland</li>
+                  <li>+48 (510) 729-078</li>
+                  <li>ada.hryhorenko@gmail.com</li>
+                </ul>
+              </div>
+
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                <h4>Software development</h4>
+                <h5>2015 - 2017</h5>
+                <p><em>STEP Computer Academy</em></p>
+                <p>
+                  Specialized in software development and system architecture,
+                  gaining a solid foundation in modern technology stacks and
+                  development methodologies.
+                </p>
+              </div>
+              <div class="resume-item">
+                <h4>Bachelor's Degree Industrial and Civil Engineering</h4>
+                <h5>2011 - 2015</h5>
+                <p>
+                  <em
+                    >Dnepropetrovsk Academy of Construction and Architecture</em
+                  >
+                </p>
+                <p>
+                  Focus on software engineering, programming languages, and
+                  collaborative project work, setting the stage for a career in
+                  software development.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="resume-title">Professional Experience</h3>
+              <div class="resume-item">
+                <h4>Senior Fullstack Developer</h4>
+                <h5>2022 - Present</h5>
+                <p><em>24sju, Poland</em></p>
+                <ul>
+                  <li>
+                    Lead development efforts for self-checkout software systems
+                    across 100+ stores.
+                  </li>
+                  <li>
+                    Managed both frontend and backend teams, ensuring seamless
+                    integration of services.
+                  </li>
+                  <li>
+                    Optimized deployment processes using Docker, improving
+                    system reliability and scalability.
+                  </li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>Frontend Developer</h4>
+                <h5>2022 - 2022</h5>
+                <p><em>Secret Cloud, Moscow Russia</em></p>
+                <ul>
+                  <li>
+                    Enhanced application performance and user interface using
+                    Angular and React frameworks.
+                  </li>
+                  <li>
+                    Developed RESTful APIs, contributing to a more modular and
+                    scalable application architecture.
+                  </li>
+                  <li>
+                    Participated in the continuous improvement of application
+                    features and bug fixes.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <h4>Junior+ Fullstack Developer</h4>
+                <h5>2021 - 2022</h5>
+                <p><em>Trade, Dnipro Ukraine</em></p>
+                <ul>
+                  <li>
+                    Developing lendings from different templates on ReactJS.
+                  </li>
+                  <li>Creating a simple backend in NodeJS.</li>
+                  <li>Chat bots and payment system integration.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Resume Section -->
+
+      <!-- ======= Portfolio Section ======= -->
+      <!-- <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section> -->
+      <!-- End Portfolio Section -->
+
+      <!-- ======= Services Section ======= -->
+      <section id="services" class="services">
+        <div class="container">
+          <div class="section-title">
+            <h2>Services</h2>
+            <p>
+              Providing comprehensive web development services, I specialize in
+              building robust, scalable applications using a variety of modern
+              technologies. My expertise spans across both frontend and backend
+              development, ensuring a seamless, fully integrated solution for
+              your digital needs.
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+              <div class="icon"><i class="bi bi-code-slash"></i></div>
+              <h4 class="title"><a href="">Fullstack Development</a></h4>
+              <p class="description">
+                Complete web development services from front to back, using the
+                latest frameworks and technologies like React, Angular, and
+                Node.js to deliver dynamic, efficient, and high-performance
+                applications.
+              </p>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 icon-box"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="icon"><i class="bi bi-terminal"></i></div>
+              <h4 class="title"><a href="">Backend Solutions</a></h4>
+              <p class="description">
+                Designing and developing scalable server-side logic using
+                Node.js, Express, and managing database integrations with
+                systems like MongoDB and SQL for robust data handling and
+                storage solutions.
+              </p>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 icon-box"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="icon"><i class="bi bi-palette"></i></div>
+              <h4 class="title"><a href="">UI/UX Design</a></h4>
+              <p class="description">
+                Crafting visually appealing and user-friendly interfaces using
+                HTML, CSS, SCSS, and JavaScript, ensuring that the user
+                experience is intuitive and engaging across all platforms.
+              </p>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 icon-box"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="icon"><i class="bi bi-layers"></i></div>
+              <h4 class="title">
+                <a href="">API Development and Integration</a>
+              </h4>
+              <p class="description">
+                Building and integrating RESTful APIs with frontend and backend
+                systems to enhance application capabilities and connectivity
+                using tools like Postman for testing and deployment.
+              </p>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 icon-box"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="icon"><i class="bi bi-box-seam"></i></div>
+              <h4 class="title"><a href="">DevOps and Deployment</a></h4>
+              <p class="description">
+                Utilizing Docker for containerization and deployment, managing
+                the development pipeline and infrastructure to ensure smooth,
+                continuous integration and delivery for projects of all sizes.
+              </p>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 icon-box"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <div class="icon"><i class="bi bi-graph-up"></i></div>
+              <h4 class="title"><a href="">Performance Optimization</a></h4>
+              <p class="description">
+                Analyzing and improving application performance by optimizing
+                both frontend and backend components, ensuring high efficiency
+                and responsiveness of your applications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Services Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>ADA</span></strong>
+        </div>
+      </div>
+    </footer>
+    <!-- End  Footer -->
+
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
